@@ -12,10 +12,10 @@
 # > denotes the name of the picture
 ####################################
 #Total Enemies/Helpers
-8
+9
 ####################################
 #Total Sprite Images (including player sprites)
-26
+28
 ####################################
 #Player
 >player1.png
@@ -77,3 +77,7 @@ balloon
 >balloon.png
 >balloon.png
 >balloon.png
+#i
+tree
+>tree1.png
+>tree2.png
