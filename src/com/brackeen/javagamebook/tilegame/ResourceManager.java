@@ -313,6 +313,9 @@ public class ResourceManager {
             if(hostSprite instanceof Boss)
             	((Boss)sprite).setHealth(10);
             
+            if(hostSprite instanceof SuperTree)
+                ((SuperTree)sprite).setHealth(3);
+            
             // center the sprite
             sprite.setX(
                 TileMapRenderer.tilesToPixels(tileX) +
@@ -442,6 +445,10 @@ public class ResourceManager {
             	if(s.getArchType(x).compareTo("tree")==0)
             		enemyAnim[x][i]=createGrubAnim(
             				images[i][imageIndex++], images[i][imageIndex++]);
+            	else 
+            	if(s.getArchType(x).compareTo("supertree")==0)
+            		enemyAnim[x][i]=createGrubAnim(
+            				images[i][imageIndex++], images[i][imageIndex++]);
         }
 
         // create creature sprites
@@ -487,6 +494,10 @@ public class ResourceManager {
             else
             if(s.getArchType(x).compareTo("tree") == 0)
         		enemySprites[x]=new Tree(enemyAnim[x][0], enemyAnim[x][1],
+        				enemyAnim[x][2], enemyAnim[x][3]);
+            else
+            if(s.getArchType(x).compareTo("supertree") == 0)
+        		enemySprites[x]=new SuperTree(enemyAnim[x][0], enemyAnim[x][1],
         				enemyAnim[x][2], enemyAnim[x][3]);
     }
     
