@@ -4,7 +4,7 @@ import com.brackeen.javagamebook.graphics.Animation;
 import com.brackeen.javagamebook.codereflection.*;
 
 /**
-    A Grub is a Creature that moves slowly on the ground.
+    A SuperTree will do everything that a tree does but has 3 health. It is also faster 
 */
 public class SuperTree extends Creature {
 
@@ -22,6 +22,10 @@ public class SuperTree extends Creature {
         								e.getStackTrace()[0].getMethodName());
         	}
     	}
+    	
+    	health = 3;
+        trackPlayer = true;
+        intelligent = true;
     }
 
 
@@ -34,7 +38,7 @@ public class SuperTree extends Creature {
         								e.getStackTrace()[0].getMethodName());
         	}
     	}
-        return 0.05f * enemySpeedMultiplier;
+        return 0.09f * enemySpeedMultiplier;
     }
 
 }

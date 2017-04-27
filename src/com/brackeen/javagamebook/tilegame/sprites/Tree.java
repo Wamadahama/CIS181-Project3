@@ -4,7 +4,7 @@ import com.brackeen.javagamebook.graphics.Animation;
 import com.brackeen.javagamebook.codereflection.*;
 
 /**
-    A Grub is a Creature that moves slowly on the ground.
+    A tree is a creature that moves slowly on the ground, it will track the player .
 */
 public class Tree extends Creature {
 
@@ -22,6 +22,9 @@ public class Tree extends Creature {
         								e.getStackTrace()[0].getMethodName());
         	}
     	}
+    	
+        trackPlayer = true;
+        setHorizontalResponceTime(225.0f);
     }
 
 

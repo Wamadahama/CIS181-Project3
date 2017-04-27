@@ -313,8 +313,8 @@ public class ResourceManager {
             if(hostSprite instanceof Boss)
             	((Boss)sprite).setHealth(10);
             
-            if(hostSprite instanceof SuperTree)
-                ((SuperTree)sprite).setHealth(3);
+            //if(hostSprite instanceof SuperTree)
+                //((SuperTree)sprite).setHealth(3);
             
             // center the sprite
             sprite.setX(
