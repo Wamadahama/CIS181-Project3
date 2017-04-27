@@ -1139,10 +1139,16 @@ public class GameManager extends GameCore {
                 		scoreBoard.setMultiplier((float) (10*player.consecutiveHits));
                 		scoreBoard.addScore(10);
                 		
+                		if(badguy instanceof Cloud) {
+                			player.jump(false);
+                			player.setY(0);
+                		} else {
+                			player.jump(true);	
+                		}
             			player.setY(badguy.getY() - player.getHeight());
             			badguy.setState(Creature.STATE_HURT);
             			
-                		player.jump(true);
+                		
             		}
             	}
             	
