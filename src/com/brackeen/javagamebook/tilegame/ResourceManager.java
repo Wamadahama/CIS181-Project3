@@ -312,9 +312,7 @@ public class ResourceManager {
           
             if(hostSprite instanceof Boss)
             	((Boss)sprite).setHealth(10);
-            
-            //if(hostSprite instanceof SuperTree)
-                //((SuperTree)sprite).setHealth(3);
+           
             
             // center the sprite
             sprite.setX(
@@ -449,6 +447,12 @@ public class ResourceManager {
             	if(s.getArchType(x).compareTo("supertree")==0)
             		enemyAnim[x][i]=createGrubAnim(
             				images[i][imageIndex++], images[i][imageIndex++]);
+            	else
+                if(s.getArchType(x).compareTo("mango") ==0)
+                	enemyAnim[x][i]=createOneAnim(images[i][imageIndex++]);
+                else
+                if(s.getArchType(x).compareTo("cloud") ==0)
+                	enemyAnim[x][i]=createOneAnim(images[i][imageIndex++]);
         }
 
         // create creature sprites
@@ -499,6 +503,17 @@ public class ResourceManager {
             if(s.getArchType(x).compareTo("supertree") == 0)
         		enemySprites[x]=new SuperTree(enemyAnim[x][0], enemyAnim[x][1],
         				enemyAnim[x][2], enemyAnim[x][3]);
+            else 
+            if(s.getArchType(x).compareTo("cloud") == 0)
+           		enemySprites[x]=new Cloud(enemyAnim[x][0], enemyAnim[x][1],
+           				enemyAnim[x][2], enemyAnim[x][3]);
+            else
+            if(s.getArchType(x).compareTo("mango") == 0)
+            	enemySprites[x]=new Mango(enemyAnim[x][0], enemyAnim[x][1],
+            			enemyAnim[x][2], enemyAnim[x][3]);
+             
+            	
+     
     }
     
     public String levelBackground()
@@ -766,6 +781,15 @@ public class ResourceManager {
          
             return anim;
         }
+    
+    
+    private Animation createOneAnim(Image img1) {
+    	Animation anim = new Animation();
+    	
+    	anim.addFrame(img1, 50);
+    	
+    	return anim;
+    }
     
     private void loadPowerUpSprites() {
     	if(CodeReflection.isTracing() && TilegamePackageTracingEnabled.getTilegamePackageTracingEnabledInstance().isEnabled()) {

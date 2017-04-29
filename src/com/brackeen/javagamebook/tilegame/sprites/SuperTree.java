@@ -1,3 +1,8 @@
+/**
+ * Elijah Ellis
+ * 4/27/2017
+ * Super Tree
+ * */
 package com.brackeen.javagamebook.tilegame.sprites;
 
 import com.brackeen.javagamebook.graphics.Animation;

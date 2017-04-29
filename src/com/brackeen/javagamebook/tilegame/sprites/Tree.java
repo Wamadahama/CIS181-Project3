@@ -1,3 +1,8 @@
+/**
+ * Elijah Ellis
+ * 4/27/2017
+ * Tree Creature
+ * */
 package com.brackeen.javagamebook.tilegame.sprites;
 
 import com.brackeen.javagamebook.graphics.Animation;
@@ -24,7 +29,7 @@ public class Tree extends Creature {
     	}
     	
         trackPlayer = true;
-        setHorizontalResponceTime(225.0f);
+        setHorizontalResponceTime(225.0f); 
     }
 
 

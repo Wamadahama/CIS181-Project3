@@ -1,10 +1,10 @@
 #This Map was generated using Map Creator v1.1
                                                                                                     
                                                                                                     
-                                                                                                    
- II                                                                                                 
-                                                                                                    
-                                                                                                    
-                                                                                                    
-          i                                                                                         
-IIIIIIIIIIIIIII                                                                                     
+               B                  B                
+              BA                 BA                 
+             BAA                BAA                  
+            BAAA               BAAA                   
+          BAAAAA   oooooooo   BAAAA         k
+BBBBBBBBBBBBBBBBiiii ii   i BAAAAAA j                 
+AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBB                    BBBBBBBBBBBBBBBBBBBB 

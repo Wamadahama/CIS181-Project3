@@ -1,3 +1,4 @@
+
 package com.brackeen.javagamebook.tilegame;
 
 import java.awt.*;
@@ -1139,16 +1140,10 @@ public class GameManager extends GameCore {
                 		scoreBoard.setMultiplier((float) (10*player.consecutiveHits));
                 		scoreBoard.addScore(10);
                 		
-                		if(badguy instanceof Cloud) {
-                			player.jump(false);
-                			player.setY(0);
-                		} else {
-                			player.jump(true);	
-                		}
             			player.setY(badguy.getY() - player.getHeight());
             			badguy.setState(Creature.STATE_HURT);
             			
-                		
+                		player.jump(true);
             		}
             	}
             	
@@ -1169,8 +1164,18 @@ public class GameManager extends GameCore {
             			scoreBoard.setMultiplier((float) (10*player.consecutiveHits));
             			scoreBoard.addScore(10);
             		}
-        			player.setY(badguy.getY() - player.getHeight());
-        			player.jump(true);
+        			
+            		player.setY(badguy.getY() - player.getHeight());
+            		
+            		
+        			if( badguy instanceof Cloud ) {        				
+        				//player.setY(0);
+        				player.setOnGround(true);
+//        				player.jump(false);
+        			} else {
+            			player.jump(true);        				
+        			}
+
             	}
             	execute=true;
             }

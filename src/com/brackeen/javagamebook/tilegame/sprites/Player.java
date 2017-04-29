@@ -2,6 +2,7 @@ package com.brackeen.javagamebook.tilegame.sprites;
 
 import com.brackeen.javagamebook.graphics.Animation;
 import com.brackeen.javagamebook.codereflection.*;
+import com.brackeen.javagamebook.input.InputManager;
 
 /**
     The Player.
@@ -40,7 +41,7 @@ public class Player extends Creature {
         if ((onGround || forceJump) && isAlive()) {
             onGround = false;
             setVelocityY(jumpSpeed * playerJumpSpeedMultiplier);
-        }
+        }                
     }
 
     public void collideHorizontal() {
@@ -54,10 +55,6 @@ public class Player extends Creature {
     	}
         setVelocityX(0);
     }
-
-
-
-
     public void wakeUp() {
     	if(CodeReflection.isTracing() && SpritesPackageTracingEnabled.getSpritesPackageTracingEnabledInstance().isEnabled()) {
         	if(CodeReflection.getAbstactionLevel()>=3)
@@ -69,7 +66,10 @@ public class Player extends Creature {
     	}
         // do nothing
     }
-
+    
+    public void setOnGround(boolean ground) {
+    	onGround = ground;
+    }
 
 
 
