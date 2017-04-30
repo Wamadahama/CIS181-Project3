@@ -453,6 +453,12 @@ public class ResourceManager {
                 else
                 if(s.getArchType(x).compareTo("cloud") ==0)
                 	enemyAnim[x][i]=createOneAnim(images[i][imageIndex++]);
+                else
+                if(s.getArchType(x).compareTo("supermonkey") ==0)
+                	enemyAnim[x][i]=createOneAnim(images[i][imageIndex++]);
+                else
+                if(s.getArchType(x).compareTo("alien") ==0)
+                	enemyAnim[x][i]=createOneAnim(images[i][imageIndex++]);
         }
 
         // create creature sprites
@@ -511,8 +517,14 @@ public class ResourceManager {
             if(s.getArchType(x).compareTo("mango") == 0)
             	enemySprites[x]=new Mango(enemyAnim[x][0], enemyAnim[x][1],
             			enemyAnim[x][2], enemyAnim[x][3]);
-             
-            	
+            else
+            if(s.getArchType(x).compareTo("supermonkey") ==0)
+            	enemySprites[x] = new SuperMonkey(enemyAnim[x][0], enemyAnim[x][1],
+            			enemyAnim[x][2], enemyAnim[x][3]);
+            else
+            if(s.getArchType(x).compareTo("alien") ==0)
+            	enemySprites[x] = new Alien(enemyAnim[x][0], enemyAnim[x][1],
+            			enemyAnim[x][2], enemyAnim[x][3]);
      
     }
     

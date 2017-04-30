@@ -12,10 +12,10 @@
 # > denotes the name of the picture
 ####################################
 #Total Enemies/Helpers
-12
+14
 ####################################
 #Total Sprite Images (including player sprites)
-32
+34
 ####################################
 #Player
 >player1.png
@@ -91,3 +91,9 @@ cloud
 #l
 mango
 >mango.png
+#m
+alien
+>alien.png
+#n
+supermonkey
+>SuperMonkey.png
